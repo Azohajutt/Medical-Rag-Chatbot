@@ -3,7 +3,7 @@
 An intelligent medical information and symptom checking assistant powered by Retrieval-Augmented Generation (RAG).
 This application leverages Google's Gemini LLM to answer medical queries utilizing a verified local medical dataset. It runs on a FastAPI backend with ChromaDB for fast vector search and a native HTML/CSS/JS frontend.
 
-## 🌟 Features
+## Features
 
 *   **Retrieval-Augmented Generation (RAG)**: Bases its answers on the provided `dataset.xlsx`, mapping symptoms and medical conditions accurately.
 *   **Urgency Classification**: Automatically detects and flags query urgency (routine, urgent, emergency).
@@ -11,7 +11,7 @@ This application leverages Google's Gemini LLM to answer medical queries utilizi
 *   **Gemini Integration**: Utilizes Google's fast and smart `gemini-3-flash-preview` model via the `google-generativeai` SDK.
 *   **Vector Search Engine**: Employs `chromadb` along with `sentence-transformers` (`all-MiniLM-L6-v2`) to perform semantic searches over the medical dataset.
 
-## 🛠️ Project Structure
+## Project Structure
 
 ```
 Medical_chatbot/
@@ -30,7 +30,7 @@ Medical_chatbot/
     └── style.css               # UI Styling
 ```
 
-## 🚀 Setup & Installation
+## Setup & Installation
 
 ### 1. Prerequisites 
 - Python 3.10+
@@ -63,7 +63,7 @@ python ingest.py
 ```
 This will read `../data/dataset.xlsx`, chunk the contents, and store the embeddings in `chroma_db/`.
 
-## 💻 Usage
+## Usage
 
 ### 1. Start the API Server
 In the `backend` directory with your virtual environment active, run:
