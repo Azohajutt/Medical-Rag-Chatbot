@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medical RAG Chatbot</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="app">
+
+    <div class="header">
+      <div class="header-icon">⚕</div>
+      <div>
+        <div class="header-title">Medical Assistant</div>
+        <div class="header-sub">Powered by Gemini · all-MiniLM-L6-v2 · ChromaDB</div>
+      </div>
+      <div class="status"><span class="dot"></span>Online</div>
+    </div>
+
+    <div class="messages" id="messages">
+      <div class="msg bot">
+        <div class="avatar bot">M</div>
+        <div class="bubble">
+          <span class="badge routine">ROUTINE</span>
+          Hello! Describe your symptoms and I'll search my medical knowledge base to assist you.
+          <div class="disclaimer">⚠️ Informational only. Always consult a qualified doctor.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chips" id="chips">
+      <button class="chip" onclick="useChip(this)">Fever and sore throat</button>
+      <button class="chip" onclick="useChip(this)">Chest pain when breathing</button>
+      <button class="chip" onclick="useChip(this)">Persistent headache 3 days</button>
+      <button class="chip" onclick="useChip(this)">Swollen ankle after fall</button>
+    </div>
+
+    <div class="input-bar">
+      <textarea id="input" placeholder="Describe your symptoms..." rows="1"
+        onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
+      <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+        <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+      </button>
+    </div>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

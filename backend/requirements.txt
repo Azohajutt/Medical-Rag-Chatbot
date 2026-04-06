@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+python-dotenv
+google-generativeai
+sentence-transformers
+chromadb
+pandas
+openpyxl
+langchain
+langchain-community
+tiktoken
